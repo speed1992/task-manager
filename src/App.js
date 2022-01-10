@@ -1,11 +1,4 @@
 import './App.css';
+import { HomePage } from './views/homePage';
 
-function App() {
-  return (
-    <div className="App">
-      Task Manager initialized.
-    </div>
-  );
-}
-
-export default App;
+export const App = () => <HomePage />
