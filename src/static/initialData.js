@@ -6,9 +6,21 @@ let dataSet = {
         "task-4": { title: "Deployment", description: "Description for task-4" }
     },
     columns: {
-        "column-1": { id: "column-1", title: "To Do", taskIds: ['task-1'] },
-        "column-2": { id: "column-2", title: "In Progress", taskIds: ['task-2', 'task-3'] },
-        "column-3": { id: "column-3", title: "Done", taskIds: [] },
+        "column-1": {
+            id: "column-1",
+            title: "To Do",
+            taskIds: ['task-4']
+        },
+        "column-2": {
+            id: "column-2",
+            title: "In Progress",
+            taskIds: ['task-3']
+        },
+        "column-3": {
+            id: "column-3",
+            title: "Done",
+            taskIds: ['task-1', 'task-2']
+        },
     },
     columnOrder: ["column-1", "column-2", "column-3"]
 }
