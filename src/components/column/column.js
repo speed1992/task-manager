@@ -7,7 +7,6 @@ export const Column = () => {
     return (
         <>
             <Task />
-            <AddNewCard />
 
         </>
     )

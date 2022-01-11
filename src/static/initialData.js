@@ -1,4 +1,4 @@
-let dataSet = {
+export let dataSet = {
     tasks: {
         // "task-1": { title: "Technical Design", description: "Description for task 1" },
         // "task-2": { title: "Initialize Project", description: "Description for task-2" },
