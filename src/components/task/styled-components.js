@@ -11,7 +11,7 @@ export const Container = styled.div`
     ${props => props.isDragging && `
         transform: rotate(45deg);
     `};
-    
+
     &:hover {
         background-color: #f6f6f6;
     }
