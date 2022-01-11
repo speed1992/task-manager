@@ -37,9 +37,8 @@ export const AddNewCard = ({ column, appData }) => {
                     }}> Add</button >
                 </span >)
                 :
-                (<button onClick={() => {
-                    setCardOpen(true);
-                }}> Add new card</button >)}
-        </Container>
+                (<button onClick={() => setCardOpen(true)}> Add new card</button >)
+            }
+        </Container >
     )
 }
