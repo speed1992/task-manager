@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import dataSet from "../../static/initialData";
-import { getDataFromLocalStorage, setDataInLocalStorage } from "../../utils/commonUtils";
+import dataSet from "../../../static/initialData";
+import { getDataFromLocalStorage, setDataInLocalStorage } from "../../../utils/commonUtils";
 
 export const getDataDefaultState = () => {
     const dataFromLocalStorage = getDataFromLocalStorage();
@@ -12,5 +12,3 @@ export const useLocalStorage = (data) =>{
         setDataInLocalStorage(data);
     },[data])
 }
-
-export const onDragEnd = result => { }
