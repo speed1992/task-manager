@@ -1,6 +1,9 @@
 # Task Manager
 Task manager is used to keep track of your tasks which are assigned to you.
 
+## Screenshot
+![Alt Text](https://github.com/speed1992/task-manager/blob/main/demo.gif?raw=true)
+
 ## Demo
 [https://speed1992.github.io/task-manager/](https://speed1992.github.io/task-manager/)
 ## Code setup
