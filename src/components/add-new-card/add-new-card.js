@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Container } from "../column/styled-components";
+import { Button, Container, Input, TextArea } from "./styled-components";
 import { addNewCardHandler, validate } from "./utils/handlerUtils";
 import { useOnClickOutside } from "./utils/utils";
 
@@ -26,18 +26,20 @@ export const AddNewCard = ({ column, appData }) => {
         <Container>
             {isCardOpen ?
                 (<span ref={ref} onChange={handleCardChanges}>
-                    <input ref={titleRef} id="title" type="text" />
-                    <textarea id="description" />
-                    <button onClick={() => {
-                        if (validate(newCard)) {
-                            addNewCardHandler({ ...newCard, column, appData })
-                            setNewCard({ title: "", description: "" })
-                            setCardOpen(false)
-                        }
-                    }}> Add</button >
+                    <Input ref={titleRef} id="title" type="text" placeholder="Title" />
+                    <TextArea id="description" placeholder="Description" />
+                    <div>
+                        <Button onClick={() => {
+                            if (validate(newCard)) {
+                                addNewCardHandler({ ...newCard, column, appData })
+                                setNewCard({ title: "", description: "" })
+                                setCardOpen(false)
+                            }
+                        }}> Add</Button >
+                    </div>
                 </span >)
                 :
-                (<button onClick={() => setCardOpen(true)}> Add new card</button >)
+                (<span onClick={() => setCardOpen(true)}>+Add new card</span >)
             }
         </Container >
     )
