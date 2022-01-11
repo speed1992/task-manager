@@ -4,7 +4,7 @@ export const setDataInLocalStorage = data => setValueInLocalStorage("data", data
 const getValueFromLocalStorage = (key) => {
   try {
     const item = JSON.parse(localStorage.getItem(key));
-    return JSON.parse(item);
+    return item;
 
   } catch (error) {
     console.log(error);

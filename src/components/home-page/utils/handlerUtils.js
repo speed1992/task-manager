@@ -1,7 +1,7 @@
 export const onDragEnd = ({ result, data, setData }) => {
-    const { destination, source, draggableId, type } = result;
+    const { destination = null, source, draggableId, type } = result;
 
-    if (!destination) return
+    if (!destination || destination === undefined) return
 
     if (destination.droppableId === source.droppableId && destination.index === source.index) return
 
