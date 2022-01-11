@@ -1,6 +1,9 @@
-const getDataFromLocalStorage = (key) => {
+export const getDataFromLocalStorage = () => getValueFromLocalStorage("data");
+export const setDataInLocalStorage = data => setValueInLocalStorage("data", data);
+
+const getValueFromLocalStorage = (key) => {
   try {
-    const item = window.localStorage.getItem(key);
+    const item = JSON.parse(localStorage.getItem(key));
     return JSON.parse(item);
 
   } catch (error) {
@@ -8,9 +11,9 @@ const getDataFromLocalStorage = (key) => {
   }
 };
 
-const setDataInLocalStorage = (key, value) => {
+const setValueInLocalStorage = (key, value) => {
   try {
-    window.localStorage.setItem(key, JSON.stringify(value));
+    localStorage.setItem(key, JSON.stringify(value));
   } catch (error) {
     console.log(error);
   }
