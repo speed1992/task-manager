@@ -7,11 +7,13 @@ export const Container = styled.div`
     width:220px;
     display:flex;
     flex-direction: column;
-    background-color:white;
+    background-color: ${props => (props.isDragging ? 'skyblue' : 'white')};
 `;
 
-export const Title = styled.h3`
-    padding: 8px
+export const Title = styled.div`
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px
 `;
 
 export const TaskList = styled.div`

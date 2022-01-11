@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
-import { AddNewCard } from "../add-new-card/add-new-card";
 import { Column } from "../column/column";
 import { Container } from "./styled-components";
 import { onDragEnd } from "./utils/handlerUtils";
@@ -21,10 +20,7 @@ export const HomePage = () => {
                         {columnOrder && columnOrder.map((id, index) => {
                             const column = columns[id]
                             const tasks = column.taskIds.map(taskId => data.tasks[taskId])
-                            return (<div key={column.id}>
-                                <Column key={column.id} column={column} tasks={tasks} index={index} />
-                                <AddNewCard />
-                            </div>)
+                            return (<Column key={column.id} column={column} tasks={tasks} index={index} appData={{ data, setData }} />)
                         })}
                         {placeholder}
                     </Container>
